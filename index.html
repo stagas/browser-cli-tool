@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test Page</title>
+</head>
+
+<body>
+  <h1>Check the console!</h1>
+  <button id="testButton" onclick="console.log('testButton clicked')">Click Me</button>
+  <script>
+    console.log('hello world', { foo: 'bar' })
+    console.error('This is an error message')
+    console.warn('This is a warning message')
+    console.info('This is an info message')
+    console.debug('This is a debug message')
+    console.trace('This is a trace message')
+    console.assert(1 === 1, 'This assertion should pass')
+    console.assert(1 === 2, 'This assertion should fail')
+    console.group('Grouped Messages')
+    console.log('This is a message inside a group')
+    console.groupEnd()
+    console.log('This is outside the group')
+    console.table([{ name: 'Alice', age: 30 }, { name: 'Bob', age: 25 }])
+    console.time('Timer')
+    for (let i = 0; i < 1000000; i++) {
+      // Simulating some work
+    }
+    console.timeEnd('Timer')
+    console.clear()
+    console.log('This message should appear after clearing the console')
+    console.error('This is an error with a stack trace', new Error('Sample error'))
+    console.log('%cThis is styled text', 'color: blue; font-size: 20px;')
+    console.log('%cThis is styled text', 'color: red; font-size: 20px; background-color: yellow;')
+
+    function willError() {
+      throw new Error('This is an error thrown from a function')
+    }
+    function callWillError() {
+      willError()
+    }
+
+    async function asyncWillError() {
+      throw new Error('This is an error from an async function')
+    }
+
+    asyncWillError()
+
+    callWillError()
+  </script>
+</body>
+
+</html>
