@@ -2,6 +2,9 @@
   "name": "browser-cli-tool",
   "module": "index.js",
   "type": "module",
+  "version": "1.0.0",
+  "author": "stagas",
+  "license": "MIT",
   "description": "Runs puppeteer and outputs any console output to the CLI. Great for LLMs to debug browser code.",
   "repository": "https://github.com/stagas/browser-cli-tool",
   "bin": {
